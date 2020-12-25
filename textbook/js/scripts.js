@@ -1,15 +1,21 @@
 'use strict';
 
-// const obj = {
-//     name: 'pidar',
-//     age: 54,
-//     isMaried: false
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
 
-// };
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-// console.log(obj.name);
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+    b = prompt('Один из последних просмотренных фильмов?', ''),
+    c = prompt('На сколько оцените его?', ''),
+    d = prompt('На сколько оцените его?', '');
 
-// confirm('idinahui');
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-const lexa = prompt('ti lexa?', 'hui');
-console.log(lexa + ' na');
+console.log(personalMovieDB);
