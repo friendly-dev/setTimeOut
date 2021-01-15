@@ -6,13 +6,11 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false,
+    private: false,
     start: function() {
-        personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
-
-        while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+        do {
             personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
-        }
+        } while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count));
     },
     rememberMyFilms: function() {
         for (let i = 0; i < 2; i++) {
@@ -45,10 +43,10 @@ const personalMovieDB = {
         }
     },
     toggleVisibleMyDB: function() {
-        if (personalMovieDB.privat) {
-            personalMovieDB.privat = false;
+        if (personalMovieDB.private) {
+            personalMovieDB.private = false;
         } else {
-            personalMovieDB.privat = true;
+            personalMovieDB.private = true;
         }
     },
     writeYourGenres: function() {
